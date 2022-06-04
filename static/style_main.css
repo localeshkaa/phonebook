@@ -1,0 +1,74 @@
+h
+{
+    font-size: 200%;
+}
+
+p
+{
+    font-size: 100%;
+}
+
+.wrapper
+{
+    width: 90%;
+    margin-left: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;}
+
+.roof
+{
+    height: 100px;
+    align-items: baseline;
+    flex-wrap: nowrap;
+}
+
+.roof h, p
+{
+    text-align: left;
+}
+
+.roof p
+{
+    opacity: 40%;
+}
+
+.container
+{
+    width: 100%;
+    min-height: 100px;
+}
+
+.inline
+{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+inline-wrap
+{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.column
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.content
+{
+    justify-content: flex-start;
+    margin-top: 5px;
+}

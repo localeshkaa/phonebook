@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="static/style_main.css">
+</head>
+<body>
+<div class="wrapper">
+    <div class="roof inline">
+        <h1>Телефонная книга</h1>
+        <p>Разработана студентами МАИ</p>
+    </div>
+    <div class="container first inline">
+        <div class="head">
+            <h1>
+                {% if count %}
+                {{ count }}
+                {% endif %}
+            </h1>
+        </div>
+        <div class="filter">
+            <form method="post" action="/">
+                <div class="inline">
+                    <input type="text" name="search-value" placeholder="Введите сюда фильтр">
+                    <input type="submit" , name="submit-search" , value="Искать">
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="container second column">
+        <div class="column">
+            {%for person in users%}
+                <div class="inline-nowrap content">
+                    <form method="post" action="/" class="view_form">
+                        <input type="text" name="del" value="{{users.index(person)}}">
+                        <input type="text" name="first_name" value="{{person[1]}}">
+                        <input type="text" name="middle_name" value="{{person[2]}}">
+                        <input type="text" name="last_name" value="{{person[0]}}">
+                        <input type="text" name="phone" value="{{person[3]}}">
+                        <input type="submit" , name="submit-edit" , value="Обновить" class="update">
+                        <input type="submit" , name="submit-del" , value="Удалить" class="delete">
+                    </form>
+                </div>
+            {%endfor%}
+        </div>
+    </div>
+    <br>
+    <div class="container third column">
+        <div class="inline-wrap content">
+            <form method="post" action="/">
+                <input type="text" name="last_name" placeholder="Имя">
+                <input type="text" name="first_name" placeholder="Фамилия">
+                <input type="text" name="middle_name" placeholder="Отчество">
+                <input type="text" name="phone" placeholder="Телефон">
+                <input type="submit" , name="submit" , value="Добавить пользователя">
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>
